@@ -1,2 +1,2 @@
 # Mochi bot
- Mochi is a discord bot on my discord server
+Mochi is a discord bot on my discord server
