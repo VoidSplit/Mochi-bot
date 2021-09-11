@@ -39,7 +39,7 @@ module.exports = class MochiClient extends AkairoClient {
         this.functions = {
             embed: embed
         }
-        console.log("   ·•· ·•· ·•·   ");
+        console.log("\n   ·•· ·•· ·•·   ");
         this.commandHandler.loadAll();
         console.log("\u001b[0;34m- All CommandHandlers loaded");
         this.commandHandler.useListenerHandler(this.listenerHandler);
