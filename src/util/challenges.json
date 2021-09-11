@@ -1,0 +1,242 @@
+{
+    "python": [
+        {
+            "id": 0,
+            "value": "question 0",
+            "difficulty": "easy",
+            "time": 600
+        },
+        {
+            "id": 1,
+            "value": "question 1",
+            "difficulty": "normal",
+            "time": 1800
+        },
+        {
+            "id": 2,
+            "value": "question 2",
+            "difficulty": "hard",
+            "time": 3600
+        }
+    ],
+    "php": [
+        {
+            "id": 0,
+            "value": "question 0",
+            "difficulty": "easy",
+            "time": 600
+        },
+        {
+            "id": 1,
+            "value": "question 1",
+            "difficulty": "easy",
+            "time": 600
+        },
+        {
+            "id": 2,
+            "value": "question 2",
+            "difficulty": "easy",
+            "time": 600
+        }
+    ],
+    "javascript": [
+        {
+            "id": 0,
+            "value": "question 0",
+            "difficulty": "easy",
+            "time": 600
+        },
+        {
+            "id": 1,
+            "value": "question 1",
+            "difficulty": "easy",
+            "time": 600
+        },
+        {
+            "id": 2,
+            "value": "question 2",
+            "difficulty": "easy",
+            "time": 600
+        }
+    ],
+    "css": [
+        {
+            "id": 0,
+            "value": "question 0",
+            "difficulty": "easy",
+            "time": 600
+        },
+        {
+            "id": 1,
+            "value": "question 1",
+            "difficulty": "easy",
+            "time": 600
+        },
+        {
+            "id": 2,
+            "value": "question 2",
+            "difficulty": "easy",
+            "time": 600
+        }
+    ],
+    "c": [
+        {
+            "id": 0,
+            "value": "question 0",
+            "difficulty": "easy",
+            "time": 600
+        },
+        {
+            "id": 1,
+            "value": "question 1",
+            "difficulty": "easy",
+            "time": 600
+        },
+        {
+            "id": 2,
+            "value": "question 2",
+            "difficulty": "easy",
+            "time": 600
+        }
+    ],
+    "c#": [
+        {
+            "id": 0,
+            "value": "question 0",
+            "difficulty": "easy",
+            "time": 600
+        },
+        {
+            "id": 1,
+            "value": "question 1",
+            "difficulty": "easy",
+            "time": 600
+        },
+        {
+            "id": 2,
+            "value": "question 2",
+            "difficulty": "easy",
+            "time": 600
+        }
+    ],
+    "c++": [
+        {
+            "id": 0,
+            "value": "question 0",
+            "difficulty": "easy",
+            "time": 600
+        },
+        {
+            "id": 1,
+            "value": "question 1",
+            "difficulty": "easy",
+            "time": 600
+        },
+        {
+            "id": 2,
+            "value": "question 2",
+            "difficulty": "easy",
+            "time": 600
+        }
+    ],
+    "java": [
+        {
+            "id": 0,
+            "value": "question 0",
+            "difficulty": "easy",
+            "time": 600
+        },
+        {
+            "id": 1,
+            "value": "question 1",
+            "difficulty": "easy",
+            "time": 600
+        },
+        {
+            "id": 2,
+            "value": "question 2",
+            "difficulty": "easy",
+            "time": 600
+        }
+    ],
+    "rust": [
+        {
+            "id": 0,
+            "value": "question 0",
+            "difficulty": "easy",
+            "time": 600
+        },
+        {
+            "id": 1,
+            "value": "question 1",
+            "difficulty": "easy",
+            "time": 600
+        },
+        {
+            "id": 2,
+            "value": "question 2",
+            "difficulty": "easy",
+            "time": 600
+        }
+    ],
+    "scratch": [
+        {
+            "id": 0,
+            "value": "question 0",
+            "difficulty": "easy",
+            "time": 600
+        },
+        {
+            "id": 1,
+            "value": "question 1",
+            "difficulty": "easy",
+            "time": 600
+        },
+        {
+            "id": 2,
+            "value": "question 2",
+            "difficulty": "easy",
+            "time": 600
+        }
+    ],
+    "lua": [
+        {
+            "id": 0,
+            "value": "question 0",
+            "difficulty": "easy",
+            "time": 600
+        },
+        {
+            "id": 1,
+            "value": "question 1",
+            "difficulty": "easy",
+            "time": 600
+        },
+        {
+            "id": 2,
+            "value": "question 2",
+            "difficulty": "easy",
+            "time": 600
+        }
+    ],
+    "any languages": [
+        {
+            "id": 0,
+            "value": "question 0",
+            "difficulty": "easy",
+            "time": 600
+        },
+        {
+            "id": 1,
+            "value": "question 1",
+            "difficulty": "normal",
+            "time": 1800
+        },
+        {
+            "id": 2,
+            "value": "question 2",
+            "difficulty": "hard",
+            "time": 3600
+        }
+    ]
+}

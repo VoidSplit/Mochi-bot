@@ -39,9 +39,13 @@ module.exports = class MochiClient extends AkairoClient {
         this.functions = {
             embed: embed
         }
-
+        console.log("   ·•· ·•· ·•·   ");
         this.commandHandler.loadAll();
+        console.log("- All CommandHandlers loaded");
         this.commandHandler.useListenerHandler(this.listenerHandler);
+        console.log("- CommandHandlers use ListenerHandler now");
         this.listenerHandler.loadAll();
+        console.log("- All ListenerHandler loaded");
+        console.log("   ·•· ·•· ·•·   ");
     }
 }
