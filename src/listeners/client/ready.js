@@ -8,7 +8,7 @@ class ReadyListener extends Listener {
         });
     }
     exec() {
-        console.log('Mochi is ready.');
+        console.log( "\u001b[0;32m Mochi is ready.\u001B[0m");
         console.log("   ·•· ·•· ·•·   ")
     }
 }
