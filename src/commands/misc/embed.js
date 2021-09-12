@@ -4,14 +4,13 @@ class EmbedCommand extends Command {
     constructor() {
         super('Embed', {
             aliases: ['embed', 'emb'],
-            //description: 'Affiche les information de l\'utilisateur'
-            // ignoreCooldown: '382945750872752146',
-            // ignorePermissions: '382945750872752146',
-            //userPermissions: 'KICK_MEMBERS',
-            //ratelimit: 2,
+            category: 'misc',
             cooldown: 5000,
-            //typing: true,
-            //ownerOnly: true,
+            description: {
+                content: 'La commande embed renvoie un embed personnalisé',
+                usage: 'embed [color] | [title] | [description] | <fieldTitle> | <fieldContent>',
+                exemples: ['embed #eb4034 | Ceci est un titre | Ceci est la description de mon embed', 'embed #eb4034 | Ceci est un titre | Ceci est la description de mon embed | ceci est le titre du field | ceci est la description du field']
+            },
             channel: 'guild',
             args: [
                 { id: 'Color', type: 'text', default: '#ffffff' },

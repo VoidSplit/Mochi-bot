@@ -13,6 +13,11 @@ module.exports = class EvalCommand extends Command {
       aliases: ['eval'],
       category: 'dev',
       ownerOnly: true,
+      description: {
+          content: 'La commande eval teste un script javascript',
+          usage: 'eval [code]',
+          exemples: ['eval [code]']
+      },
       args: [
         {
           id: 'code',

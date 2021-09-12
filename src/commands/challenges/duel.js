@@ -5,8 +5,14 @@ class DuelCommand extends Command {
         super('duel', {
             aliases: ['duel', 'defi'],
             userPermissions: 'KICK_MEMBERS',
+            category: 'challenges',
             cooldown: 5000,
             channel: 'guild',
+            description: {
+                content: 'La commande duel lance un duel avec un autre utilisateur, et prend au hasard un défi plus au moins dur dans la catégorie choisie',
+                usage: 'duel [@user] <langage>',
+                exemples: ['duel @user python', 'defi @user']
+            },
             args: [
                 { id: 'user', type: 'memberMention', default: '' },
                 { id: 'langage', type: 'text', default: 'any languages' }
