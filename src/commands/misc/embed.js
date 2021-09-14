@@ -6,6 +6,7 @@ class EmbedCommand extends Command {
             aliases: ['embed', 'emb'],
             category: 'misc',
             cooldown: 5000,
+            userPermissions: 'KICK_MEMBERS',
             description: {
                 content: 'La commande embed renvoie un embed personnalisé',
                 usage: 'embed [color] | [title] | [description] | <fieldTitle> | <fieldContent>',

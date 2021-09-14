@@ -16,13 +16,26 @@ class UserInfoCommand extends Command {
                 exemples: ['userinfo @user']
             },
             args: [
-                { id: 'firstArgs', match: 'content' }
-            ],
-            separator: '|'
+                { id: 'user', type: 'user', default: '' }
+            ]
         });
     }
     exec(message, args) {
-        return message.reply(`arg1s ${args.firstArgs}`);
+        console.log(args.user)
+        return message.channel.send({ embeds: [
+            this.client.functions.embed()
+                .setColor("#4287f5")
+                .setThumbnail(args.user.avatarURL())
+                .addFields(
+                    { name: '**► ID:**', value: args.user.id, inline: true },
+                    { name: '**► Tag:**', value: `${args.user.username}#${args.user.discriminator}`, inline: true },
+                    { name: '**► Nickname:**', value: `${args.user.client.nickname}`, inline: true },
+                    { name: '**► Created account:**', value: `${args.user.createdAt}`, inline: true },
+                    { name: '**► Join:**', value: `?`, inline: true },
+                    { name: '**► Bot:**', value: `${args.user.bot}`, inline: true }
+                )
+                .setTimestamp()
+        ] });
     }
 }
 
