@@ -16,12 +16,14 @@ class UserInfoCommand extends Command {
                 exemples: ['userinfo @user']
             },
             args: [
-                { id: 'user', type: 'user', default: '' }
+                { id: 'user', type: 'member', default: '' }
             ]
         });
     }
     exec(message, args) {
         console.log(args.user)
+        return message.channel.send(`\`\`\`${args.user} : ${args.user.user.username}\`\`\``)
+        /*
         return message.channel.send({ embeds: [
             this.client.functions.embed()
                 .setColor("#4287f5")
@@ -35,8 +37,13 @@ class UserInfoCommand extends Command {
                     { name: '**► Bot:**', value: `${args.user.bot}`, inline: true }
                 )
                 .setTimestamp()
-        ] });
+        ] });*/
     }
 }
 
 module.exports = UserInfoCommand;
+
+
+
+
+

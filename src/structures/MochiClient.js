@@ -1,5 +1,7 @@
 const { AkairoClient, CommandHandler, ListenerHandler } = require('discord-akairo');
 const { embed } = require('../util/functions');
+const mongoose = require('mongoose');
+const { TOKEN, MONGOSTRING } = require('../util/config')
 
 module.exports = class MochiClient extends AkairoClient {
     constructor(config = {}) {
@@ -39,13 +41,36 @@ module.exports = class MochiClient extends AkairoClient {
         this.functions = {
             embed: embed
         }
+    }
+
+    init() {
         console.log("\n   ·•· ·•· ·•·   ");
-        this.commandHandler.loadAll();
-        console.log("\u001b[0;34m- All CommandHandlers loaded");
         this.commandHandler.useListenerHandler(this.listenerHandler);
-        console.log("- CommandHandlers use ListenerHandler now");
+        console.log("\u001b[0;34m- CommandHandlers use ListenerHandler now");
+        this.commandHandler.loadAll();
+        console.log("- All CommandHandlers loaded");
+        console.log(`\u001b[0;33m   Commands => ${this.commandHandler.modules.size}`)
         this.listenerHandler.loadAll();
-        console.log("- All ListenerHandler loaded\u001B[0m");
+        console.log("\u001b[0;34m- All ListenerHandler loaded");
+        console.log(`\u001b[0;33m   Listeners => ${this.listenerHandler.modules.size}\u001B[0m`)
         console.log("   ·•· ·•· ·•·   ");
+    }
+
+    async start() {
+        try {
+            await mongoose.connect(MONGOSTRING, {
+                useNewUrlParser: true,
+                useUnifiedTopology: true
+            });
+            console.log("   ·•· ·•· ·•·   \n");
+            console.log("\u001b[0;33m- DB connectée\u001B[0m");
+        } catch(e) {
+            console.log("   ·•· ·•· ·•·   \n");
+            console.log("\u001b[0;33m- DB pas connectée! Voir l'erreur ci-dessous!\u001B[0m\n\n", e);
+            return process.exit();
+        }
+
+        await this.init();
+        return this.login(TOKEN);
     }
 }
