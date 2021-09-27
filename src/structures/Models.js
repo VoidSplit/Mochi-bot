@@ -6,7 +6,7 @@ const guildSchema = Schema({
         type: String,
         default: '%'
     }
-})
+});
 
 module.exports = {
     Guild: model('Guild', guildSchema)

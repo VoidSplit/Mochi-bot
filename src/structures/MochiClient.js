@@ -1,7 +1,8 @@
 const { AkairoClient, CommandHandler, ListenerHandler } = require('discord-akairo');
-const { embed } = require('../util/functions');
+const { embed, button } = require('../util/functions');
 const mongoose = require('mongoose');
-const { TOKEN, MONGOSTRING } = require('../util/config')
+const { GuildsProvider } = require('../structures/Providers');
+const { TOKEN, MONGOSTRING } = require('../util/config');
 
 module.exports = class MochiClient extends AkairoClient {
     constructor(config = {}) {
@@ -29,7 +30,11 @@ module.exports = class MochiClient extends AkairoClient {
 
         this.commandHandler = new CommandHandler(this, {
             allowMentions: true,
-            prefix: config.prefix,
+            prefix: async message => {
+                const guildPrefix = await this.guildSettings.get(message.guild);
+                if(guildPrefix) return guildPrefix.prefix;
+                return config.prefix;
+            },
             defaultCooldown: 2000,
             directory: './src/commands/'
         });
@@ -38,9 +43,8 @@ module.exports = class MochiClient extends AkairoClient {
             directory: './src/listeners/'
         });
 
-        this.functions = {
-            embed: embed
-        }
+        this.functions = { embed: embed, button: button }
+        this.guildSettings = new GuildsProvider();
     }
 
     init() {
