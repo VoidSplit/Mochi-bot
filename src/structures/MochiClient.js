@@ -18,8 +18,8 @@ module.exports = class MochiClient extends AkairoClient {
                     status: 'dnd',
                     activities: [
                         {
-                            name: 'LDDD',
-                            type: 'COMPETING',
+                            name: '!help',
+                            type: 'PLAYING',
                             url: 'https://github.com/VoidSplit'
                         }
                     ]
@@ -27,7 +27,6 @@ module.exports = class MochiClient extends AkairoClient {
                 intents: 32767
             }
         );
-
         this.commandHandler = new CommandHandler(this, {
             allowMentions: true,
             prefix: async message => {

@@ -9,8 +9,8 @@ class EmbedCommand extends Command {
             userPermissions: 'KICK_MEMBERS',
             description: {
                 content: 'La commande embed renvoie un embed personnalisé',
-                usage: 'embed [color] | [title] | [description] | <fieldTitle> | <fieldContent>',
-                exemples: ['embed #eb4034 | Ceci est un titre | Ceci est la description de mon embed', 'embed #eb4034 | Ceci est un titre | Ceci est la description de mon embed | ceci est le titre du field | ceci est la description du field']
+                usage: 'embed [color] .s; [title] .s; [description] .s; <fieldTitle> .s; <fieldContent>',
+                exemples: ['embed #eb4034 .s; Ceci est un titre .s; Ceci est la description de mon embed', 'embed #eb4034 .s; Ceci est un titre .s; Ceci est la description de mon embed .s; ceci est le titre du field .s; ceci est la description du field']
             },
             channel: 'guild',
             args: [
@@ -20,7 +20,7 @@ class EmbedCommand extends Command {
                 { id: 'FieldTitle', type: 'text', default: '' },
                 { id: 'FieldContent', type: 'text', default: '' }
             ],
-            separator: '|'
+            separator: '.s;'
         });
     }
     exec(message, args) {
