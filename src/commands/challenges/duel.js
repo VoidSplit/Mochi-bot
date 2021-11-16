@@ -161,7 +161,6 @@ class DuelCommand extends Command {
 
 
 
-            /*
             //! Si une interaction a été detecté
             this.client.on('interactionCreate', async interaction => {
 
@@ -243,7 +242,7 @@ class DuelCommand extends Command {
                 //? On console.log pour le débug
                 collector.on('end', collected => console.log(`Collected ${collected.size} items`));
 
-            });*/
+            });
         }
     }
 }

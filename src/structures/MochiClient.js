@@ -50,6 +50,7 @@ module.exports = class MochiClient extends AkairoClient {
         console.log("\n   ·•· ·•· ·•·   ");
         this.commandHandler.useListenerHandler(this.listenerHandler);
         console.log("\u001b[0;34m- CommandHandlers use ListenerHandler now");
+        this.listenerHandler.setEmitters({ commandHandler: this.commandHandler });
         this.commandHandler.loadAll();
         console.log("- All CommandHandlers loaded");
         console.log(`\u001b[0;33m   Commands => ${this.commandHandler.modules.size}`)
